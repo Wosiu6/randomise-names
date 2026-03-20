@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Randomiser</title>
+    <meta
+      name="description"
+      content="Paste a list of names and randomise their order with animated visuals."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="grid"></span>
+    </div>
+
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">RANDOMISE NAMES</p>
+        <h1>Drop Names. Hit Shuffle. Watch The Chaos Behave.</h1>
+      </header>
+
+      <section class="panel" aria-label="Name randomiser">
+        <label for="namesInput">Names (one per line or comma-separated)</label>
+        <textarea
+          id="namesInput"
+          placeholder="Alex\nMorgan\nSam\nJordan"
+          spellcheck="false"
+        ></textarea>
+
+        <div class="controls">
+          <button id="randomiseBtn" type="button">Randomise</button>
+          <button id="copyBtn" type="button" class="ghost">Copy Result</button>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="output-wrap" aria-label="Randomised names output">
+        <ol id="output" class="output"></ol>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
